@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Game-On
+{% endblock %}
+
+{% block content %}
+    <div class="text-center">
+        <br>
+        <br>
+        <h1 class="text-center product_title">
+            Thanks for placing your order
+            <h5 >
+                We have received your order and will begin processing right away.
+                You will be notified when the order is ready for delivery.
+            </h5>
+        </h1>
+        <br> 
+        <br>
+        <h1 class="text-center product_title">Your order number is: <b>{{ customer_order.id }}</b></h1>
+        <br>
+        <p>
+            
+        </p>
+    </div>
+{% endblock %}
