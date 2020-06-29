@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import django
 import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -42,7 +41,7 @@ INSTALLED_APPS = [
     'merch',
     'stripe',
     'crispy_forms',
-    'storages',
+    # 'storages',
 ]
 
 MIDDLEWARE = [
@@ -140,8 +139,7 @@ AWS_STORAGE_BUCKET_NAME = "game-on-paddy"
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 django_heroku.settings(locals())
-django.setup()
