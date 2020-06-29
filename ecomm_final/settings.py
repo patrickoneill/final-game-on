@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django
 import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -21,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'abe_l6$+a@_q8=$4$=hd%_xrc%0%l-nes%lstfk7$)pbn+wi_9'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'abe_l6$+a@_q8=$4$=hd%_xrc%0%l-nes%lstfk7$)pbn+wi_9')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'merch',
     'stripe',
     'crispy_forms',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -129,8 +131,17 @@ STATIS_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
-STRIPE_PUBLISHABLE_KEY = 'pk_test_N00KKdIMATsuHdhbTe4nti97'
-STRIPE_SECRET_KEY = 'sk_test_M3Jq071MHsNdy5bKMK49yEok'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+STRIPE_PUBLISHABLE_KEY = "pk_test_N00KKdIMATsuHdhbTe4nti97"
+STRIPE_SECRET_KEY = "sk_test_M3Jq071MHsNdy5bKMK49yEok"
+AWS_ACCESS_KEY_ID = "AKIA5DEYQ6AHAV2UVM2O"
+AWS_SECRET_ACCESS_KEY = "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"
+AWS_STORAGE_BUCKET_NAME = "game-on-paddy"
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 
 django_heroku.settings(locals())
+django.setup()
