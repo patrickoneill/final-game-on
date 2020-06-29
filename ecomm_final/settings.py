@@ -26,7 +26,7 @@ SECRET_KEY = 'abe_l6$+a@_q8=$4$=hd%_xrc%0%l-nes%lstfk7$)pbn+wi_9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://finalproj-gameon.herokuapp.com/']
+ALLOWED_HOSTS = ['https://game-on-paddy.herokuapp.com/']
 
 
 # Application definition
