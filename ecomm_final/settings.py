@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'abe_l6$+a@_q8=$4$=hd%_xrc%0%l-nes%lstfk7$)pbn+wi_9'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'merch',
     'stripe',
     'crispy_forms',
-    # 'storages',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +69,6 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'merch.context_processors.menu_links',
                 'merch.context_processors.counter',
-
             ],
         },
     },
@@ -131,11 +130,11 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-STRIPE_PUBLISHABLE_KEY = "pk_test_N00KKdIMATsuHdhbTe4nti97"
-STRIPE_SECRET_KEY = "sk_test_M3Jq071MHsNdy5bKMK49yEok"
-AWS_ACCESS_KEY_ID = "AKIA5DEYQ6AHAV2UVM2O"
-AWS_SECRET_ACCESS_KEY = "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"
-AWS_STORAGE_BUCKET_NAME = "game-on-paddy"
+STRIPE_PUBLISHABLE_KEY = os.environ.get('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 
