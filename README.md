@@ -1,11 +1,10 @@
 # Game on - Final Project
 
-change debug to flase
 ## Overview G4M3 ON
 The idea behind this project is aimed toward the gaming world industry, 
 with and ecommerce side to it along with an login function. The idea is 
 that you can buy items from the site like clothing and other items game
-related.
+related as well as a comment section/ review for each item on the website.
 
 ## Languages used:
 - html5
@@ -40,6 +39,14 @@ that are to be approved in the site. linking in the static.
 In these file the urls for each page was created and them in the main urls.py were 
 all linked in using the include() function along with the path call. Makes creating the link for pages a
 lot easier for naming using the {% url '< name here>' %}
+
+```python
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+]
+```
 
 ### installed packages for the project
 installs
