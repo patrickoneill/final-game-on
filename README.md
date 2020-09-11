@@ -23,10 +23,10 @@ For the project I created the base HTML page for the main layout and inside that
 
 The extends calls on the baase html page and adds in all the consistant layout for the pages
 ```html
-{% extends 'base.html' %}
+{% extends 'base.html' %} <!-- Calls on the base page layout-->
 {% load static %} <!-- loads the static files needed -->
 {% block title %}
-Home
+Home              <!-- The title is changable with block title tag -->
 {% endblock %}
 ```
 The include calls on the specific file to add in such as the navbar and footer
@@ -66,6 +66,9 @@ small amounts of code on each page
 Example of the admin page of the site which would not been seen on the user end where the products would be uploaded with there information. As described further down the slug information is created here in the model.
 
 ```python
+
+# Model created for handling the admin side of the site
+
 class Category(models.Model):
     name = models.CharField(max_length=250, unique=True)
     slug = models.SlugField(max_length=250, unique=True)
@@ -107,12 +110,21 @@ urlpatterns = [
 an example of how the url path is written in the HTML, 
 where a single word is defined for to file path to each page.
 ```html
+
+<!-- The url link to the page name set up with readable -->
+
 <li class="nav-item">
     <a href="{% url 'signup' %}">
         Sign Out 
     </a>
 </li>
 ```
+
+## Gitignore file and Requirements file
+
+- The use of the gitignore file stores all the file that are to be ignore when saving a file but exist in the backgorund, such as the environment variables that handle the KEYS for Stripe and AWS.
+
+- Requirements file is needed for the hosting of the project on Heroku
 
 # Installed packages for the project:
 With some of the installs I had a bit of trouble as they needed updating or a different command for installing
