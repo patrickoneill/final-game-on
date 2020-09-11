@@ -24,7 +24,7 @@ For the project deployment I use Heroku for hosting and build information on any
 For the project I created the base HTML page for the main layout and inside that had the Navbar and Footer, which were seperate pages to allow easier editing in the future. Using the extend function to lay each into the page with ease.
 
 The extend calls on the base html page and adds in all the consistant layout for the pages
-```html
+```bash
 {% extends 'base.html' %} <!-- Calls on the base page layout-->
 {% load static %} <!-- loads the static files needed -->
 {% block title %}
@@ -32,7 +32,7 @@ Home              <!-- The title is changable with block title tag -->
 {% endblock %}
 ```
 The include calls on the specific file to add in such as the navbar and footer
-```html
+```bash
 {% include 'navbar.html' %}
 {% include 'footer.html' %}
 ```
