@@ -25,15 +25,15 @@ For the project I created the base HTML page for the main layout and inside that
 
 The extend calls on the base html page and adds in all the consistant layout for the pages
 ```html
-{% load static %} <!-- loads the static files needed -->
-{% block title %}
+extends 'base.html' <!-- Calls on the base page layout -->
+load static  <!-- loads the static files needed -->
+block title 
 Home              <!-- The title is changable with block title tag -->
-{% endblock %}
-```
+endblock ```
 The include calls on the specific file to add in such as the navbar and footer
 ```html
-{% include 'navbar.html' %}
-{% include 'footer.html' %}
+include 'navbar.html'
+include 'footer.html'
 ```
 
 ## Accounts
