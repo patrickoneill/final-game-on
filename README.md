@@ -172,3 +172,4 @@ Issues
 - Products not being added to the category
 - Checkout issues with Stripe
 
+<a href="https://github.com/patrickoneill">Patrick O;Neill's GitHub<a>
