@@ -25,7 +25,6 @@ For the project I created the base HTML page for the main layout and inside that
 
 The extend calls on the base html page and adds in all the consistant layout for the pages
 ```html
-{% 'extends' 'base.html' %} <!-- Calls on the base page layout -->
 {% load static %} <!-- loads the static files needed -->
 {% block title %}
 Home              <!-- The title is changable with block title tag -->
