@@ -115,7 +115,7 @@ where a single word is defined for to file path to each page.
 <!-- The url link to the page name set up with readable -->
 
 <li class="nav-item">
-    <a href="{% url 'signup' %}">
+    <a href=" url 'signup' ">
         Sign Out 
     </a>
 </li>
