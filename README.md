@@ -92,7 +92,7 @@ class Category(models.Model):
 ### Urls
 In these file the urls for each page was created and them in the main urls were 
 all linked in using the include() function along with the path call. Makes creating the link for pages a
-lot easier for naming using the {% url '< pagename >' %}
+lot easier for naming
 
 The urlpattern for the project
 ```python
