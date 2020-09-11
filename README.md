@@ -10,6 +10,8 @@ related as well as a comment section/ review for each item on the website.
 
 For the project deployment I use Heroku for hosting and build information on any problems there might be for running the site such as packages, requirements needed or any broken links or incorrect code along with Amazon Web Services for storing information and images in a database
 
+<a href="https://finalproj-gameon.herokuapp.com/"> * Heroku Hosted App Here *</a>
+
 ## Languages used:
 - HTML5
 - css / bootstrap
